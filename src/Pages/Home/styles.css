@@ -1,108 +1,172 @@
 #home-page {
     width: 100vw;
     height: 100vh;
+}
+
+#home-page #topnav {
+    margin-bottom: 0rem;
+}
+
+#home-page .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../Assets/Images/bg-1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     display: flex;
+    justify-content: center;
 }
 
-#home-page #main-header {
+#home-page .hero-text {
+    color: #fff;
+    font: 700 1.2rem Archivo;
     display: flex;
-}
-
-#home-page .navVisible {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-items: center;
-}
-
-#home-page #main-header #nav-items {
-    display: inline;
-    margin-top: 10px;
-}
-
-#home-page #main-header #nav-items #nav-item {
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    text-justify: center;
-    color: #666;
-    font-weight: 700;
-}
-
-#home-page #main-header #nav-items #nav-item:hover {
-    border-bottom: 1px solid black;
-}
-
-@media(max-width:1100px) {
-    #home-page #main-header #nav-item {
-        padding: 12px 24px;
-        margin-top: 1
-    }
-}
-
-#home-page #main-header button {
-    width: 3rem;
-    height: 4rem;
-    background: var(--color-primary);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.4rem Archivo;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    transition: 0.2s;
-    text-decoration: none;
-}
-
-#home-page #main-content {
+    flex-direction: column;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-#home-page #main-content img {
-    width: 20rem;
-    height: 20rem;
+#home-page .hero-text h1 {
+    font: 700 4.2rem Archivo;
+}
+
+#home-page .hero-text p {
+    font: 700 1.8rem Archivo;
+    margin-top: 0.8rem;
+}
+
+#home-page .hero-text img {
     border-radius: 50%;
+    height: 250px;
 }
 
-
-/* #home-page #main-content h1 {
-    color: var(--color-title-in-primary);
-} */
-
-#home-page #main-content p {
-    font-weight: 700;
-}
-
-#home-page #main-content a {
-    width: 22rem;
-    height: 4rem;
-    background: var(--color-primary-dark);
-    color: var(--color-line-in-white);
-    border: 0;
-    border-radius: 0.8rem;
+#home-page .hero-text a {
+    height: 5.8rem;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
     cursor: pointer;
-    font: 700 1.4rem Archivo;
+    font: 700 1.6rem Archivo;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.2s;
     text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 1.2rem;
 }
 
-#home-page #main-content a:hover {
-    background-color: #222222;
+#home-page .hero-text a:hover {
+    background-color: #000;
+    color: #fff;
 }
 
-.footer {
-    position: fixed;
+#home-page fieldset {
+    margin-top: 2.4rem;
+    border: 0;
+    padding: 0 2.4rem;
+    text-align: center;
+}
+
+#home-page fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#home-page fieldset legend {
+    font: 700 1.8rem Archivo;
+    color: #222;
+    margin-bottom: 2.4rem;
+    justify-content: start;
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid #000;
+}
+
+#home-page fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+#home-page fieldset div a {
+    height: 5.8rem;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 1.2rem;
+}
+
+#home-page fieldset div a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#home-page footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem
+}
+
+#home-page footer button {
+    height: 5.8rem;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 1.2rem;
+}
+
+#home-page footer button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#home-page .footer {
+    position: relative;
     left: 0;
     bottom: 0;
+    height: 4.5vh;
     width: 100%;
     background-color: black;
     color: white;
     text-align: center;
+}
+
+@media(min-width:700px) {
+    #home-page {
+        max-width: 100vw;
+    }
+    #home-page .topnav {
+        margin-bottom: 0;
+    }
+    #home-page main fieldset legend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #home-page main fieldset {
+        padding: 0 6.4rem;
+    }
+    #home-page main footer {
+        padding: 4.0rem 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
