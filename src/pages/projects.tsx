@@ -25,7 +25,7 @@ export default function ProjectsPage() {
         <title> JoaoptGaino | Projects</title>
         <meta
           name="description"
-          content="I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences."
+          content="I'm Software engineer based in Brazil. In love with learning and improvement. I'm always looking for new challenges and opportunities. Specializing in building solutions to clients"
         />
         <link rel="icon" href="/assets/logo_dark_theme.png" />
       </Head>
