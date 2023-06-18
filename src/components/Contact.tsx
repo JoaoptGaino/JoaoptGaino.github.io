@@ -26,8 +26,9 @@ const Contact = () => {
                 <h2 className="py-2">João Pedro Theodoro Gaino</h2>
                 <p>Software Engineer</p>
                 <p className="py-4">
-                  Im available for freelance, full-time or contract positions.
-                  Contact me and lets talk.
+                  {
+                    "I'm available for freelance or contract positions. Contact me and lets talk."
+                  }
                 </p>
               </div>
               <div>
@@ -81,7 +82,7 @@ const Contact = () => {
                     rows={10}
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gray-100 m-4">
+                <button className="w-full p-4 text-gray-100 mt-4">
                   Send message
                 </button>
               </form>

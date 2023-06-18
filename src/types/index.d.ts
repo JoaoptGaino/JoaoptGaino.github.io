@@ -25,3 +25,23 @@ interface ExperienceProps {
   description: string;
   skills: string;
 }
+
+interface GithubApiResponse {
+  id: number;
+  name: string;
+  full_name: string;
+  description: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  language: string | null;
+  html_url: string;
+}
+interface GithubProjectProps {
+  name: string;
+  fullName: string;
+  description: string | null;
+  stars: number;
+  url: string;
+  language: string | null;
+  forks: number;
+}
