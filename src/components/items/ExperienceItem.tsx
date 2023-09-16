@@ -8,6 +8,7 @@ const ExperienceItem = ({
   from,
   to,
   skills,
+  responsabilities,
 }: ExperienceProps) => {
   return (
     <li className="mb-10 ml-4 cursor-default">
@@ -26,12 +27,36 @@ const ExperienceItem = ({
       <h4 className="text-lg font-semibold text-gray-900 dark:text-[#4EFF7C]">
         {position}
       </h4>
-      <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        <span className="inline-block md:max-w-sm lg:max-w-xl">
-          {description}
-        </span>
-      </p>
-      <p className="text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+      {!responsabilities?.length && (
+        <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          <span className="inline-block md:max-w-sm lg:max-w-xl">
+            {description}
+          </span>
+        </p>
+      )}
+
+      <ul className="ml-4 list-disc marker:dark:text-[#00FF43]">
+        {responsabilities?.length
+          ? responsabilities.map((responsability, index) =>
+              index === 0 ? (
+                <li
+                  key={index}
+                  className="text-sm font-bold leadning-none text-gray-400 dark:text-gray-700 cursor-default"
+                >
+                  {responsability}
+                </li>
+              ) : (
+                <li
+                  key={index}
+                  className="text-sm font-normal leadning-none text-gray-400 dark:text-gray-700 cursor-default"
+                >
+                  {responsability}
+                </li>
+              )
+            )
+          : null}
+      </ul>
+      <p className="mt-2 text-xs font-normal leading-none text-gray-600 dark:text-gray-500">
         {skills}
       </p>
     </li>

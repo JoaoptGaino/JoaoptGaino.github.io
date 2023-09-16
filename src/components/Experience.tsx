@@ -3,7 +3,10 @@ import ExperienceItem from "./items/ExperienceItem";
 
 const Experience = () => {
   return (
-    <div id="experience" className="w-full lg:h-screen p-2">
+    <div
+      id="experience"
+      className="w-full md:h-screen p-2 flex items-center lg:h-screen py-16"
+    >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#00FF43] font-bold">
           Experience

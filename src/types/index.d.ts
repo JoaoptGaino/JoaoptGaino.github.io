@@ -24,6 +24,7 @@ interface ExperienceProps {
   position: string;
   description: string;
   skills: string;
+  responsabilities?: string[];
 }
 
 interface GithubApiResponse {
